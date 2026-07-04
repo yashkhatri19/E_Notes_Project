@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.DB.DBconnect;
 import com.Dao.PostDao;
 
+// Servlet for adding notes
 @WebServlet("/AddNotesServlet")
 public class AddNotesServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
