@@ -18,7 +18,7 @@
         <a class="nav-link" href="showNotes.jsp"><i class="fa fa-snapchat-square" aria-hidden="true"></i>Show Notes</a>
       </li>
     </ul>
-
+   // login and register button
     <%
     UserDetails user = (UserDetails)session.getAttribute("userD");
     if(user != null) { 
