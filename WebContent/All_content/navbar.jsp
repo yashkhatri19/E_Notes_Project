@@ -62,6 +62,7 @@
           </div>
         </div>
       </div>
+      // modal end
     <% 
     } else { 
     %>
