@@ -8,81 +8,66 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home.jsp"><i class="fa fa-home" aria-hidden="true"></i>Home <span class="sr-only">(current)</span>
-        </a>
+        <a class="nav-link" href="home.jsp"><i class="fa fa-home" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="addNotes.jsp"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Notes</a>
       </li>
-      
       <li class="nav-item">
         <a class="nav-link" href="showNotes.jsp"><i class="fa fa-snapchat-square" aria-hidden="true"></i>Show Notes</a>
       </li>
     </ul>
+
     <%
-          UserDetails user =(UserDetails)session.getAttribute("userD");
-    if(user!=null)
-    {%>
-    	<a  href="#" class="btn btn-light my-2 my-sm-0 mr-2"  data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user-circle-o" aria-hidden="true"></i><%=user.getName() %></a>
-    	
+    UserDetails user = (UserDetails)session.getAttribute("userD");
+    if(user != null) { 
+    %>
+      <a href="#" class="btn btn-light my-2 my-sm-0 mr-2" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user-circle-o" aria-hidden="true"></i><%=user.getName() %></a>
       <a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"><i class="fa fa-registered" aria-hidden="true"></i>logout</a>
       
-      
-      
-      <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container text-center">
-              <i class="fa fa-user fa-3x"></i>
-              <h5></h5>
-              <table class="table">
-                 <tbody>
-                   <tr>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">User Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container text-center">
+                <i class="fa fa-user fa-3x"></i>
+                <table class="table mt-2">
+                  <tbody>
+                    <tr>
                       <th>User Id</th>
                       <td><%=user.getId()%></td>
-                   </tr>
-                   
-                   <tr>
+                    </tr>
+                    <tr>
                       <th>Full Name</th>
                       <td><%=user.getName()%></td>
-                   </tr>
-                   
-                   <tr>
+                    </tr>
+                    <tr>
                       <th>Email Id</th>
                       <td><%=user.getEmail()%></td>
-                   </tr>
-                 </tbody>
-              </table>
-              
-              <div>
-              <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                    </tr>
+                  </tbody>
+                </table>
+                <div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
               </div>
-              
+            </div>
+          </div>
         </div>
-  </div>
-    <% }
-    else{%>
-    	
-        <a  href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-2"><i class="fa fa-user-circle-o" aria-hidden="true"></i>login</a>
-        <a href="register.jsp" class="btn btn-light my-2 my-sm-0"><i class="fa fa-registered" aria-hidden="true"></i>Register</a>
-   <% 
-    }
+      </div>
+    <% 
+    } else { 
     %>
-    
-    
-    
+      <a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-2"><i class="fa fa-user-circle-o" aria-hidden="true"></i>login</a>
+      <a href="register.jsp" class="btn btn-light my-2 my-sm-0"><i class="fa fa-registered" aria-hidden="true"></i>Register</a>
+    <% 
+    } 
+    %>
   </div>
-  
-
-
-
-</div>
 </nav>
