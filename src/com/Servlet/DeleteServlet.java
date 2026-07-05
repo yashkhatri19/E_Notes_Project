@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.DB.DBconnect;
 import com.Dao.PostDao;
-
+// Servlet implementation class DeleteServlet
 @WebServlet("/DeleteServlet")
 public class DeleteServlet extends HttpServlet {
 	
