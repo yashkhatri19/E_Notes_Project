@@ -17,7 +17,7 @@ public class DeleteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer noteid = Integer.parseInt(request.getParameter("note_id"));
 		PostDao dao = new PostDao(DBconnect.getConn());
-		
+		// Call the delete method
 		boolean f = dao.DeleteNotes(noteid);
 		HttpSession session=null;
 		if(f)
