@@ -25,7 +25,7 @@
     %>
       <a href="#" class="btn btn-light my-2 my-sm-0 mr-2" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user-circle-o" aria-hidden="true"></i><%=user.getName() %></a>
       <a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"><i class="fa fa-registered" aria-hidden="true"></i>logout</a>
-      
+      // modal start
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
