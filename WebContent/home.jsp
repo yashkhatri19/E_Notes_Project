@@ -14,12 +14,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<%@include file="All content/Allcss.jsp" %>
+<%@include file="All_content/Allcss.jsp" %>
 </head>
 <body>
     
     <div class="container-fluid">
-    <%@include file="All content/navbar.jsp" %>
+    <%@include file="All_content/navbar.jsp" %>
     <div class="card ">
     <div class="card-body text-center">
           <img alt="" src="img/images.png" class="img-fluid mx-auto" style="width:500px;">
@@ -28,6 +28,6 @@
     </div>
     </div>
     </div>
-    <%@include file="All content/footer.jsp" %>
+    <%@include file="All_content/footer.jsp" %>
 </body>
 </html>

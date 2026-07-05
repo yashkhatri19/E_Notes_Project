@@ -17,7 +17,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Edit Notes</title>
-<%@include file="All content/Allcss.jsp"%>
+<%@include file="All_content/Allcss.jsp"%>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 	%>
 
 	<div class="container-fluid">
-		<%@include file="All content/navbar.jsp"%>
+		<%@include file="All_content/navbar.jsp"%>
 		<h1 class="text-center">Edit Your Notes</h1>
 
 		<div class="container">
@@ -60,6 +60,6 @@
 		</div>
 	</div>
 
-	<%@include file="All content/footer.jsp"%>
+	<%@include file="All_content/footer.jsp"%>
 </body>
 </html>
