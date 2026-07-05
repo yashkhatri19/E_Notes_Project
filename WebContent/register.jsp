@@ -19,20 +19,20 @@
                     </div>
                   
                     <%
-                    // Success Message (Alert info/success)
-                    String regMsg = (String) session.getAttribute("reg-sucess");
+                    // Success Message - Standardized Spelling to 'reg-success'
+                    String regMsg = (String) session.getAttribute("reg-success");
                     if(regMsg != null) {
                     %>
                         <div class="alert alert-success" role="alert">
                             <%=regMsg%> Login <a href="login.jsp" class="alert-link">click here</a>
                         </div>
                     <% 
-                        session.removeAttribute("reg-sucess");
+                        session.removeAttribute("reg-success");
                     }
                     %>
                    
                     <%
-                    // Failed Message (Now Red Alert)
+                    // Failed Message (Red Alert)
                     String failedMsg = (String) session.getAttribute("failed-msg");
                     if(failedMsg != null) {
                     %>

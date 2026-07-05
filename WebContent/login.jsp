@@ -13,13 +13,14 @@
         <div class="row">
             <div class="col-md-4 offset-md-4">
                 <div class="card mt-5">
+                    <!-- ICON FIX: Login page ke liye fa-user-circle-o ya fa-sign-in behtar lagta hai -->
                     <div class="card-header text-center text-white bg-custom">
-                        <i class="fa fa-user-plus fa-3x" aria-hidden="true"></i>
+                        <i class="fa fa-sign-in fa-3x" aria-hidden="true"></i>
                         <h3>Login Page</h3>
                     </div>
                    
                     <%
-                    // Login Failed Message (Now Red Alert)
+                    // Login Failed Message (Red Alert)
                     String invalidMsg = (String) session.getAttribute("login-failed");
                     if(invalidMsg != null) {
                     %>
@@ -32,7 +33,7 @@
                     %>
                   
                     <%
-                    // Access without Login Message (Now Red Alert)
+                    // Access without Login Message (Red Alert)
                     String withoutLogin = (String) session.getAttribute("Login-error");
                     if(withoutLogin != null) {
                     %>
@@ -45,7 +46,7 @@
                     %>
                   
                     <%
-                    // Logout Success Message (Kept Green Alert)
+                    // Logout Success Message (Green Alert)
                     String lgMsg = (String) session.getAttribute("logoutMsg");
                     if(lgMsg != null) {
                     %>
@@ -58,7 +59,8 @@
                     %>
                   
                     <div class="card-body">
-                        <form action="loginServlet" method="post">
+                        <!-- ACTION PATH FIXED: loginServlet ko LoginServlet kiya (Check your actual Servlet class name) -->
+                        <form action="LoginServlet" method="post">
                             <div class="form-group">
                                 <label>Enter Email</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uemail" required>

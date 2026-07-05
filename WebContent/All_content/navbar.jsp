@@ -1,31 +1,35 @@
 <%@ page import="com.User.UserDetails" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom navbar-custom">
-  <a class="navbar-brand" href="#"><i class="fa fa-book" aria-hidden="true"></i>E-Notes</a>
+  <a class="navbar-brand" href="#"><i class="fa fa-book" aria-hidden="true"></i> E-Notes</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-// navbar content
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        
-        <a class="nav-link" href="home.jsp"><i class="fa fa-home" aria-hidden="true"></i>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.jsp"><i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="addNotes.jsp"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Notes</a>
+        <a class="nav-link" href="addNotes.jsp"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Notes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="showNotes.jsp"><i class="fa fa-snapchat-square" aria-hidden="true"></i>Show Notes</a>
+        <a class="nav-link" href="showNotes.jsp"><i class="fa fa-snapchat-square" aria-hidden="true"></i> Show Notes</a>
       </li>
     </ul>
-   // login and register button
+
     <%
+    // Session se user check karna
     UserDetails user = (UserDetails)session.getAttribute("userD");
     if(user != null) { 
     %>
-      <a href="#" class="btn btn-light my-2 my-sm-0 mr-2" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-user-circle-o" aria-hidden="true"></i><%=user.getName() %></a>
-      <a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"><i class="fa fa-registered" aria-hidden="true"></i>logout</a>
-      // modal start
+      <a href="#" class="btn btn-light my-2 my-sm-0 mr-2" data-toggle="modal" data-target="#exampleModal">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i> <%=user.getName() %>
+      </a>
+      <a href="LogoutServlet" class="btn btn-light my-2 my-sm-0">
+        <i class="fa fa-registered" aria-hidden="true"></i> logout
+      </a>
+
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -62,12 +66,15 @@
           </div>
         </div>
       </div>
-      // modal end
-    <% 
+      <% 
     } else { 
     %>
-      <a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-2"><i class="fa fa-user-circle-o" aria-hidden="true"></i>login</a>
-      <a href="register.jsp" class="btn btn-light my-2 my-sm-0"><i class="fa fa-registered" aria-hidden="true"></i>Register</a>
+      <a href="login.jsp" class="btn btn-light my-2 my-sm-0 mr-2">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i> login
+      </a>
+      <a href="register.jsp" class="btn btn-light my-2 my-sm-0">
+        <i class="fa fa-registered" aria-hidden="true"></i> Register
+      </a>
     <% 
     } 
     %>
